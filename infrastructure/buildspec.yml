@@ -26,12 +26,12 @@ phases:
 
   build:
     commands:
-      - sam build -t infrastructure/uselatest.yml
-      - sam package --s3-bucket "${ARTIFACTS_BUCKET}" --output-template-file packaged.yml
+      - scripts/build_and_distribute.sh
 
 artifacts:
+  discard-paths: yes
   files:
-    - packaged.yml
+    - 'build/*'
 
 cache:
   paths:

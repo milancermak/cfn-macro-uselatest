@@ -264,7 +264,7 @@ Resources:
                 Capabilities: CAPABILITY_IAM,CAPABILITY_AUTO_EXPAND
                 RoleArn: !GetAtt CloudformationRole.Arn
                 StackName: !Sub '${Service}-functions'
-                TemplatePath: BuildOutput::packaged.yml
+                TemplatePath: BuildOutput::packaged-ap-northeast-1.yml
               InputArtifacts:
                 - Name: BuildOutput
               Region: ap-northeast-1
@@ -280,7 +280,7 @@ Resources:
                 Capabilities: CAPABILITY_IAM,CAPABILITY_AUTO_EXPAND
                 RoleArn: !GetAtt CloudformationRole.Arn
                 StackName: !Sub '${Service}-functions'
-                TemplatePath: BuildOutput::packaged.yml
+                TemplatePath: BuildOutput::packaged-ap-northeast-2.yml
               InputArtifacts:
                 - Name: BuildOutput
               Region: ap-northeast-2
