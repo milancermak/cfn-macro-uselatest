@@ -1,6 +1,6 @@
 # cfn-macro-uselatest
 
-A Cloudformation macro that ensures you're always using the latest versions of Lambda Layers
+A Cloudformation macro that ensures you're always using the latest versions of Lambda Layers. It allows you to declare your Layers as `my-layer` instead of 'arn:aws:lambda:us-east-1:123456789012:layer:my-layer:24'.
 
 [![Build Status](https://travis-ci.com/milancermak/cfn-macro-uselatest.svg?branch=master)](https://travis-ci.com/milancermak/cfn-macro-uselatest)
 
