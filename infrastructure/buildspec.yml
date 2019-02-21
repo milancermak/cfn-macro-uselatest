@@ -31,7 +31,7 @@ phases:
 artifacts:
   discard-paths: yes
   files:
-    - 'build/*'
+    - 'build/*.yml'
 
 cache:
   paths:
