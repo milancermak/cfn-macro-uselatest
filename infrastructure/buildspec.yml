@@ -12,6 +12,7 @@ phases:
     commands:
       - printenv
       - pip install -q awscli aws-sam-cli --upgrade --user --cache-dir "${PIP_CACHE}"
+      - "export PATH=/root/.local/bin:$PATH"
       - aws --version
       - chmod +x scripts/*.sh # for some reason, +x does not carry over from git
       - scripts/install_deps.sh
