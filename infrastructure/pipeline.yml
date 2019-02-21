@@ -78,7 +78,7 @@ Resources:
                   - s3:GetObject
                   - s3:GetObjectVersion
                   - s3:PutObject
-                Resource: !Sub 'arn:aws:s3:::${RegionalArtifactsBucketPrefix}-${AWS::Region}/*'
+                Resource: !Sub 'arn:aws:s3:::${RegionalArtifactsBucketPrefix}-*/*'
               - Sid: SamTranslateDependencyPolicy
                 Effect: Allow
                 Action:
