@@ -284,3 +284,212 @@ Resources:
               InputArtifacts:
                 - Name: BuildOutput
               Region: ap-northeast-2
+
+            - Name: ap-south-1
+              ActionTypeId:
+                Category: Deploy
+                Owner: AWS
+                Provider: CloudFormation
+                Version: '1'
+              Configuration:
+                ActionMode: CREATE_UPDATE
+                Capabilities: CAPABILITY_IAM,CAPABILITY_AUTO_EXPAND
+                RoleArn: !GetAtt CloudformationRole.Arn
+                StackName: !Sub '${Service}-functions'
+                TemplatePath: BuildOutput::packaged-ap-south-1.yml
+              InputArtifacts:
+                - Name: BuildOutput
+              Region: ap-south-1
+
+            - Name: ap-southeast-1
+              ActionTypeId:
+                Category: Deploy
+                Owner: AWS
+                Provider: CloudFormation
+                Version: '1'
+              Configuration:
+                ActionMode: CREATE_UPDATE
+                Capabilities: CAPABILITY_IAM,CAPABILITY_AUTO_EXPAND
+                RoleArn: !GetAtt CloudformationRole.Arn
+                StackName: !Sub '${Service}-functions'
+                TemplatePath: BuildOutput::packaged-ap-southeast-1.yml
+              InputArtifacts:
+                - Name: BuildOutput
+              Region: ap-southeast-1
+
+            - Name: ap-southeast-2
+              ActionTypeId:
+                Category: Deploy
+                Owner: AWS
+                Provider: CloudFormation
+                Version: '1'
+              Configuration:
+                ActionMode: CREATE_UPDATE
+                Capabilities: CAPABILITY_IAM,CAPABILITY_AUTO_EXPAND
+                RoleArn: !GetAtt CloudformationRole.Arn
+                StackName: !Sub '${Service}-functions'
+                TemplatePath: BuildOutput::packaged-ap-southeast-2.yml
+              InputArtifacts:
+                - Name: BuildOutput
+              Region: ap-southeast-2
+
+
+            - Name: ca-central-1
+              ActionTypeId:
+                Category: Deploy
+                Owner: AWS
+                Provider: CloudFormation
+                Version: '1'
+              Configuration:
+                ActionMode: CREATE_UPDATE
+                Capabilities: CAPABILITY_IAM,CAPABILITY_AUTO_EXPAND
+                RoleArn: !GetAtt CloudformationRole.Arn
+                StackName: !Sub '${Service}-functions'
+                TemplatePath: BuildOutput::packaged-ca-central-1.yml
+              InputArtifacts:
+                - Name: BuildOutput
+              Region: ca-central-1
+
+            - Name: eu-central-1
+              ActionTypeId:
+                Category: Deploy
+                Owner: AWS
+                Provider: CloudFormation
+                Version: '1'
+              Configuration:
+                ActionMode: CREATE_UPDATE
+                Capabilities: CAPABILITY_IAM,CAPABILITY_AUTO_EXPAND
+                RoleArn: !GetAtt CloudformationRole.Arn
+                StackName: !Sub '${Service}-functions'
+                TemplatePath: BuildOutput::packaged-eu-central-1.yml
+              InputArtifacts:
+                - Name: BuildOutput
+              Region: eu-central-1
+
+            - Name: eu-west-1
+              ActionTypeId:
+                Category: Deploy
+                Owner: AWS
+                Provider: CloudFormation
+                Version: '1'
+              Configuration:
+                ActionMode: CREATE_UPDATE
+                Capabilities: CAPABILITY_IAM,CAPABILITY_AUTO_EXPAND
+                RoleArn: !GetAtt CloudformationRole.Arn
+                StackName: !Sub '${Service}-functions'
+                TemplatePath: BuildOutput::packaged-eu-west-1.yml
+              InputArtifacts:
+                - Name: BuildOutput
+              Region: eu-west-1
+
+            - Name: eu-west-2
+              ActionTypeId:
+                Category: Deploy
+                Owner: AWS
+                Provider: CloudFormation
+                Version: '1'
+              Configuration:
+                ActionMode: CREATE_UPDATE
+                Capabilities: CAPABILITY_IAM,CAPABILITY_AUTO_EXPAND
+                RoleArn: !GetAtt CloudformationRole.Arn
+                StackName: !Sub '${Service}-functions'
+                TemplatePath: BuildOutput::packaged-eu-west-2.yml
+              InputArtifacts:
+                - Name: BuildOutput
+              Region: eu-west-2
+
+            - Name: eu-west-3
+              ActionTypeId:
+                Category: Deploy
+                Owner: AWS
+                Provider: CloudFormation
+                Version: '1'
+              Configuration:
+                ActionMode: CREATE_UPDATE
+                Capabilities: CAPABILITY_IAM,CAPABILITY_AUTO_EXPAND
+                RoleArn: !GetAtt CloudformationRole.Arn
+                StackName: !Sub '${Service}-functions'
+                TemplatePath: BuildOutput::packaged-eu-west-3.yml
+              InputArtifacts:
+                - Name: BuildOutput
+              Region: eu-west-3
+
+            - Name: sa-east-1
+              ActionTypeId:
+                Category: Deploy
+                Owner: AWS
+                Provider: CloudFormation
+                Version: '1'
+              Configuration:
+                ActionMode: CREATE_UPDATE
+                Capabilities: CAPABILITY_IAM,CAPABILITY_AUTO_EXPAND
+                RoleArn: !GetAtt CloudformationRole.Arn
+                StackName: !Sub '${Service}-functions'
+                TemplatePath: BuildOutput::packaged-sa-east-1.yml
+              InputArtifacts:
+                - Name: BuildOutput
+              Region: sa-east-1
+
+            - Name: us-east-1
+              ActionTypeId:
+                Category: Deploy
+                Owner: AWS
+                Provider: CloudFormation
+                Version: '1'
+              Configuration:
+                ActionMode: CREATE_UPDATE
+                Capabilities: CAPABILITY_IAM,CAPABILITY_AUTO_EXPAND
+                RoleArn: !GetAtt CloudformationRole.Arn
+                StackName: !Sub '${Service}-functions'
+                TemplatePath: BuildOutput::packaged-us-east-1.yml
+              InputArtifacts:
+                - Name: BuildOutput
+              Region: us-east-1
+
+            - Name: us-east-2
+              ActionTypeId:
+                Category: Deploy
+                Owner: AWS
+                Provider: CloudFormation
+                Version: '1'
+              Configuration:
+                ActionMode: CREATE_UPDATE
+                Capabilities: CAPABILITY_IAM,CAPABILITY_AUTO_EXPAND
+                RoleArn: !GetAtt CloudformationRole.Arn
+                StackName: !Sub '${Service}-functions'
+                TemplatePath: BuildOutput::packaged-us-east-2.yml
+              InputArtifacts:
+                - Name: BuildOutput
+              Region: us-east-2
+
+            - Name: us-west-1
+              ActionTypeId:
+                Category: Deploy
+                Owner: AWS
+                Provider: CloudFormation
+                Version: '1'
+              Configuration:
+                ActionMode: CREATE_UPDATE
+                Capabilities: CAPABILITY_IAM,CAPABILITY_AUTO_EXPAND
+                RoleArn: !GetAtt CloudformationRole.Arn
+                StackName: !Sub '${Service}-functions'
+                TemplatePath: BuildOutput::packaged-us-west-1.yml
+              InputArtifacts:
+                - Name: BuildOutput
+              Region: us-west-1
+
+            - Name: us-west-2
+              ActionTypeId:
+                Category: Deploy
+                Owner: AWS
+                Provider: CloudFormation
+                Version: '1'
+              Configuration:
+                ActionMode: CREATE_UPDATE
+                Capabilities: CAPABILITY_IAM,CAPABILITY_AUTO_EXPAND
+                RoleArn: !GetAtt CloudformationRole.Arn
+                StackName: !Sub '${Service}-functions'
+                TemplatePath: BuildOutput::packaged-us-west-2.yml
+              InputArtifacts:
+                - Name: BuildOutput
+              Region: us-west-2
