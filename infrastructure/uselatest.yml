@@ -1,0 +1,33 @@
+---
+
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+
+Globals:
+  # https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst#supported-resources
+  Function:
+    Handler: main.handler
+    MemorySize: 128
+    Runtime: python3.7
+    Timeout: 10
+
+Resources:
+  MacroHandler:
+    Type: AWS::Serverless::Function
+    Properties:
+      Description: Handler for the UseLatest Cloudformation Macro
+      CodeUri: '../uselatest'
+      Policies:
+        - Version: 2012-10-17
+          Statement:
+            - Effect: Allow
+              Action:
+                - lambda:ListLayers
+              Resource: '*'
+
+  MacroResource:
+    Type: AWS::CloudFormation::Macro
+    Properties:
+      Name: UseLatest
+      Description: Automatically use the latest versions of Lambda Layers in your templates
+      FunctionName: !GetAtt MacroHandler.Arn

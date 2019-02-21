@@ -1,0 +1,17 @@
+dist: xenial
+language: python
+python:
+  - '3.7'
+cache: pip
+
+env:
+  global:
+    - AWS_DEFAULT_REGION: us-east-1
+
+install:
+  - scripts/install_deps.sh
+
+script:
+  - pytest tests -vrf
+  - scripts/lint_py.sh
+  - scripts/lint_cfn.sh

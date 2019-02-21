@@ -1,0 +1,37 @@
+---
+
+version: 0.2
+
+env:
+  variables:
+    # ARTIFACTS_BUCKET available from pipeline.yml
+    PIP_CACHE: pip_cache # used in install_deps.sh
+
+phases:
+  install:
+    commands:
+      - printenv
+      - pip install -q awscli aws-sam-cli --upgrade --user --cache-dir "${PIP_CACHE}"
+      - aws --version
+      - chmod +x scripts/*.sh # for some reason, +x does not carry over from git
+      - scripts/install_deps.sh
+      - pip list
+
+  pre_build:
+    commands:
+      - pytest tests -vrf
+      - scripts/lint_py.sh
+      - scripts/lint_cfn.sh
+
+  build:
+    commands:
+      - sam build -t infrastructure/uselatest.yml
+      - sam package --s3-bucket "${ARTIFACTS_BUCKET}" --output-template-file packaged.yml
+
+artifacts:
+  files:
+    - packaged.yml
+
+cache:
+  paths:
+    - pip_cache

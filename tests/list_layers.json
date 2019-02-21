@@ -1,0 +1,44 @@
+{
+    "ResponseMetadata": {
+        "RequestId": "020d3eea-33cf-11e9-b74f-5fe7fc2186b5",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+            "date": "Mon, 18 Feb 2019 22:46:19 GMT",
+            "content-type": "application/json",
+            "content-length": "717",
+            "connection": "keep-alive",
+            "x-amzn-requestid": "020d3eea-33cf-11e9-b74f-5fe7fc2186b5"
+        },
+        "RetryAttempts": 0
+    },
+    "Layers": [
+        {
+            "LayerName": "superlayer",
+            "LayerArn": "arn:aws:lambda:us-east-1:123456789012:layer:superlayer",
+            "LatestMatchingVersion": {
+                "LayerVersionArn": "arn:aws:lambda:us-east-1:123456789012:layer:superlayer:4",
+                "Version": 4,
+                "CreatedDate": "2019-02-18T18:46:37.903+0000",
+                "CompatibleRuntimes": [
+                    "python3.6",
+                    "python3.7"
+                ],
+                "LicenseInfo": "Apache-2.0"
+            }
+        },
+        {
+            "LayerName": "notsosuperlayer",
+            "LayerArn": "arn:aws:lambda:us-east-1:123456789012:layer:notsosuperlayer",
+            "LatestMatchingVersion": {
+                "LayerVersionArn": "arn:aws:lambda:us-east-1:123456789012:layer:notsosuperlayer:1",
+                "Version": 3,
+                "CreatedDate": "2019-02-07T19:55:37.085+0000",
+                "CompatibleRuntimes": [
+                    "python3.6",
+                    "python3.7"
+                ],
+                "LicenseInfo": "Apache-2.0"
+            }
+        }
+    ]
+}
