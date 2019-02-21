@@ -10,7 +10,7 @@ When adding a Lambda Layer to your Lambda functions, you need to fully qualify i
 
 # How it works
 
-First, you need to declare the macro in the `Transforms` section of the template. It works well together with the `AWS::Serverless-2016-10-31' tranform; it does not matter if it comes before or after it.
+First, you need to declare the macro in the `Transforms` section of the template. It works well together with the `AWS::Serverless-2016-10-31` tranform; it does not matter if it comes before or after it.
 
 Every Lambda Layer you own can henceforth be declared only by its name. When deploying the stack, the macro will call the [ListLayers](https://docs.aws.amazon.com/lambda/latest/dg/API_ListLayers.html) API to fetch the latest available version of your layers and replace the name by a fully qualified layer version ARN.
 
