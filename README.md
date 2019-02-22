@@ -71,9 +71,3 @@ Resources:
         - arn:aws:lambda:us-east-1:790194644437:layer:superlayer
         - arn:aws:lambda:us-east-1:790194644437:layer:superlayer:1
 ```
-
-# Where to get it
-
-The macro is available in the Serverless application repository. You can install the app and start using it.
-
-Alternatively, you can clone this repo and deploy a CD pipeline that will make the macro available in (almost) all AWS regions. See the [`scripts/create_pipeline.sh`](scripts/create_pipeline.sh). If you decide to go this route, modify the name of the pipeline artifacts bucket and the parameters in the `pipeline.yml`.
