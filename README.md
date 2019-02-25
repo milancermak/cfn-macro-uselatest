@@ -68,8 +68,8 @@ Resources:
         # the first two get replaced, the last one is kept
         # because it's a fully-qualified layer version ARN
         - superlayer
-        - arn:aws:lambda:us-east-1:790194644437:layer:superlayer
-        - arn:aws:lambda:us-east-1:790194644437:layer:superlayer:1
+        - arn:aws:lambda:us-east-1:123456789012:layer:superlayer
+        - arn:aws:lambda:us-east-1:123456789012:layer:superlayer:1
 ```
 
 # How to deploy it
