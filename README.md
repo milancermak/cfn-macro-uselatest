@@ -71,3 +71,7 @@ Resources:
         - arn:aws:lambda:us-east-1:790194644437:layer:superlayer
         - arn:aws:lambda:us-east-1:790194644437:layer:superlayer:1
 ```
+
+# How to deploy it
+
+I wanted to make the macro available in [SAR](https://serverlessrepo.aws.amazon.com/), sadly, a `AWS::CloudFormation::Macro` is not a supported resource. You'll have to deploy it yourself, using [SAM](https://github.com/awslabs/aws-sam-cli). Just build, package and deploy the `infrastructure/uselatest.yml` template and you're done.
